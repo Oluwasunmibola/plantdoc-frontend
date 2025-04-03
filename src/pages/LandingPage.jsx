@@ -13,18 +13,18 @@ import Navbar from "../components/Navbar"
 
 const LandingPage = () => {
     return (
-        <div>
+        <div className="min-h-screen bg-green-50">
             {/* create the navigation bar */}
             <Navbar />
-
-            {/* Hero Section */}
-            <div className="my-5 h-[80vh] mt-10 flex mx-10">
-                <div className="h-[80vh] w-[50%] mr-20">
+            {/* Hero Section my-5 h-[80vh] mt-10 flex-col mx-10 "h-[80vh] w-full mr-20 md:w-full*/}
+            <div className="flex flex-col w-full my-4 md:flex-row px-4">
+                <div className="w-full md:w-1/2">
                     <ImageSlider/>
                 </div>
 
-                <div>
-                    <h2 className="font-bold text-5xl mt-[40%] text-green-600 mb-5">AI-Powered Plant Disease Detection</h2>
+                <div className="my-4 md:w-1/2 flex flex-col justify-center text-center px-6 py-10">
+                {/* font-bold text-5xl mt-[40%] text-green-600 mb-5 */}
+                    <h2 className="font-bold text-green-600 text-3xl md: mt">AI-Powered Plant Disease Detection</h2>
                     <p className="mt-0 font-light text-black"><i>Snap a photo, get answers. Whether you’re a farmer or a plant lover, 
                     Plantdoc helps you diagnose plant issues in seconds.</i></p>
                     <div className="flex justify-center gap-20">
@@ -35,8 +35,8 @@ const LandingPage = () => {
             </div>
 
             {/* Features Section */}
-            <div className="h-[1050px]">
-                <h2 className="text-5xl font-bold text-center my-20 text-green-600">Features</h2>
+            <div>
+                <h2 className="text-3xl font-bold text-center my-10 text-green-600">Features</h2>
                 <Feature image={PlantSpecie} title="Identify Plant Species" 
                 description="Not sure what kind of plant you’re dealing with? Simply upload a photo, 
                             and Plantdoc’s AI will instantly recognize the species. 

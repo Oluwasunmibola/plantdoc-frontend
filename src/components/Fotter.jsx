@@ -1,19 +1,20 @@
 import React from "react";
 import Button from "../components/Button"
+import { Link } from "react-router-dom"
 
 const footer = () => {
     return (
-        <div className="h-32 flex justify-evenly mt-10">
+        <div className="flex flex-col justify-between items-center md:flex-row px-6 ">
 
             <div className="pt-10">
                 &copy; {new Date().getFullYear()} Plantdoc. All rights reserved.
             </div>
 
             <div>
-                <ul className="flex flex-col pt-8">
-                    <li className="hover:text-2xl"><a href="#home">Home</a></li>
-                    <li className="hover:text-2xl"><a href="#about">About Us</a></li>
-                    <li className="hover:text-2xl"><a href="#contact">Contact Us</a></li>
+                <ul className="flex pt-8 gap-10">
+                    <li className="hover:text-2xl"><Link to="/">Home</Link></li>
+                    <li className="hover:text-2xl"><Link to="/about">About Us</Link></li>
+                    <li className="hover:text-2xl"><Link to="/contact">Contact Us</Link></li>
                 </ul>
             </div>
 

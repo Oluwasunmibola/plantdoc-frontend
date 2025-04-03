@@ -18,11 +18,11 @@ const ImageSlider = () => {
     };
 
     return (
-        <div className=" mx-auto roundex-xl overflow-hidden shadow-sm h-full rounded-3xl">
+        <div className=" mx-auto roundex-xl overflow-hidden shadow-sm h-full rounded-3xl w-full">
             <Slider {...settings}>
                 {images.map((src, index) => (
                     <div key={index}>
-                        <img src={src} alt={`Slide ${index}`}  className="w-full h-[80vh] object-cover"/>
+                        <img src={src} alt={`Slide ${index}`}  className="w-full h-[80vh] object-cover shadow-lg shadow-gray-400"/>
                     </div>
                 ))}
             </Slider>
