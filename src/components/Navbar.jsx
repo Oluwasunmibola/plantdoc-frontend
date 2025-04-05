@@ -27,8 +27,8 @@ const Navbar = () => {
 
                 {/* Desktop Buttons */}
                 <div className="hidden md:flex gap-4">
-                    <Plantbutton buttonName="Login" />
-                    <Plantbutton buttonName="SignUp" />
+                    <Plantbutton buttonName="Login" to="/login" />
+                    <Plantbutton buttonName="SignUp" to="/signup"/>
                 </div>
 
                 {/* Hamburger Menu Icon */}
@@ -45,8 +45,8 @@ const Navbar = () => {
                     <Link to="/" onClick={() => setMenuOption(false)}>Home</Link>
                     <Link to="/about" onClick={() => setMenuOption(false)}>About Us</Link>
                     <Link to="/contact" onClick={() => setMenuOption(false)}>Contact Us</Link>
-                    <Plantbutton buttonName="Login" />
-                    <Plantbutton buttonName="SignUp" />
+                    <Plantbutton buttonName="Login" to="/login"/>
+                    <Plantbutton buttonName="SignUp" to="/signup"/>
                 </div>
             )}
         </nav>
